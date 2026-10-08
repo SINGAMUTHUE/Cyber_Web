@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <h1>Simple DOM Example</h1>
+
+  <input id="name" placeholder="Type your name">
+  <button id="btn">Say Hello</button>
+
+  <p id="msg"></p>
+
+  <script>
+    // 1. Select the elements
+    const input = document.getElementById("name");
+    const button = document.getElementById("btn");
+    const message = document.getElementById("msg");
+
+    // 2. When the button is clicked...
+    button.addEventListener("click", function () {
+      // 3. Read what the user typed
+      const name = input.value;
+
+      // 4. Show it on the page
+      message.textContent = "Hello, " + name + "!";
+      message.style.color = "green";
+    });
+  </script>
+
+</body>
+</html>
